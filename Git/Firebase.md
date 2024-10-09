@@ -4,5 +4,7 @@
 - database、本番環境の提供、ユーザーログイン機能などを提供している
 
 # Firebase導入2
-- ホスティング、データベース作成を行った
+- ホスティング、データベース作成を行った  
+- npm install -g firebase-toolsを実行することで、ターミナル上でFirebaseを動かすことができるようになる
+-  npm i firebasでfirebaseのライブラリを取得
 
