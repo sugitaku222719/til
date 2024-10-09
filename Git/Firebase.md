@@ -8,6 +8,18 @@
 - npm install -g firebase-toolsを実行することで、ターミナル上でFirebaseを動かすことができるようになる
 -  npm i firebasでfirebaseのライブラリを取得
 
+# データベースの取得
+```js
+const userRef = db.collection('users').doc('cTHCCZTUjcDzyy2RSMMj')
+    const doc = await userRef.get()
+    console.log('Document data:', doc.data());
+    if (!doc.exists) {
+      console.log('No such document!');
+    } else {
+      console.log('Document data:', doc.data());
+    }
+```
+  
 # データベースの追加
 ```js
 .collection(コレクション名).add({
