@@ -5,6 +5,7 @@
 - パワーシェル上で"npm start"を実行することで、localhost3000を立ち上げることができる
 
 # .map()、アロー関数
+```js
 const array1 = [1, 4, 9, 16];
 
 // Pass a function to map
@@ -12,9 +13,10 @@ const map1 = array1.map((x) => x * 2);
 
 console.log(map1);
 // Expected output: Array [2, 8, 18, 32]
-
+```
 
 # .push
+```js
 const animals = ['pigs', 'goats', 'sheep'];
 
 const count = animals.push('cows');
@@ -26,3 +28,4 @@ console.log(animals);
 animals.push('chickens', 'cats', 'dogs');
 console.log(animals);
 // Expected output: Array ["pigs", "goats", "sheep", "cows", "chickens", "cats", "dogs"]
+```
