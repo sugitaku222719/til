@@ -29,3 +29,20 @@ animals.push('chickens', 'cats', 'dogs');
 console.log(animals);
 // Expected output: Array ["pigs", "goats", "sheep", "cows", "chickens", "cats", "dogs"]
 ```
+
+# userコレクションを全て表示
+```js
+const userListItems = users.map(user => {
+    return(
+      <li key={user.userId}> 
+        <ul>
+          <li>ID : {user.userId}</li>
+          <li>name : {user.name}</li>
+          <li>age : {user.age}</li>
+          <li>location : {user.location}</li>
+        </ul>
+       </li>
+    );
+  });
+<ul>{userListItems}</ul>
+```
