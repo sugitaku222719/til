@@ -46,3 +46,28 @@ const userListItems = users.map(user => {
   });
 <ul>{userListItems}</ul>
 ```
+
+# useEffect
+```js
+useEffect(() => { ... }, []);:
+```
+useEffect フックは、コンポーネントのレンダリング後に副作用を実行します。
+[] の依存配列が空であるため、このエフェクトはコンポーネントの初回マウント時に一度だけ実行されます。  
+[]に変更があった際に副作用が実行されます。  
+  
+```js
+useEffect(() => {
+  // 副作用の処理
+  console.log('Effect is executed.');
+
+  return () => {
+    // クリーンアップの処理
+    console.log('Cleanup is executed.');
+  };
+}, []);
+```
+
+コンポーネントの初回マウント時:  
+console.log('Effect is executed.') が実行されます。  
+コンポーネントのアンマウント時:  
+返されたクリーンアップ関数が実行され、console.log('Cleanup is executed.') が実行されます。  
