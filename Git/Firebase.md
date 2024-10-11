@@ -57,3 +57,21 @@ const handleClickDeleteButton = async () => {
     await userRef.delete();
   }
 ```
+
+# データベースの検知
+```js
+useEffect(() => {
+    const db = firebase.firestore();
+    const unsubscribe = db.collection('users').onSnapshot((querySnapshot) => {
+      console.log('検知！！！');
+      querySnapshot.forEach(
+        doc => {
+          console.log(doc.id, doc.data());
+          console.log('-----------');
+        });
+    });
+    return () => {
+      unsubscribe();
+    };
+  }, []);
+```
