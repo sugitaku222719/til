@@ -36,3 +36,24 @@ const userRef = db.collection('users').doc('cTHCCZTUjcDzyy2RSMMj')
 という形で記述する。  
 setはドキュメントidを指定して追加もしくは上書きするというもので、フィールドを追加したい場合はmerge: tureを第二引数に指定する。  
 addはidを自動で生成し、追加する。
+
+# データベースの更新
+```js
+const handleClickUpdateButton = async () => {
+    const db = firebase.firestore();
+    const userRef = db.collection('users').doc('cTHCCZTUjcDzyy2RSMMj');
+    userRef.update({
+      name:'新しい田中',
+      age: 100
+    });
+  }
+```
+
+# データベースの削除
+```js
+const handleClickDeleteButton = async () => {
+    const db = firebase.firestore();
+    const userRef = db.collection('users').doc('cTHCCZTUjcDzyy2RSMMj');
+    await userRef.delete();
+  }
+```
