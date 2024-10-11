@@ -71,7 +71,7 @@ useEffect(() => {
         });
     });
     return () => {
-      unsubscribe();
+      unsubscribe();　　　//onSnapshotをページ遷移のタイミングで止めている
     };
   }, []);
 ```
